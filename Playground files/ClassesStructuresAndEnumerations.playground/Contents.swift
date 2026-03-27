@@ -1,5 +1,6 @@
 import UIKit
 
+// class Animal
 class Animal {
     var name: String
     var sound: String
@@ -22,19 +23,20 @@ class Animal {
     }
 }
 
-
+// Mammal class is subclass of Animal
 class Mammal: Animal {
     let hasFurOrHair: Bool = true
     override func description() -> String {
         super.description() + "hasFurOrHair: \(hasFurOrHair)"
     }
 }
-
+// instance of mammal class
 let cat = Mammal(name: "Oreo", sound: "Meow", numberOfLegs: 4, breathesOxygen: true)
 
 print(cat.description())
 cat.makeSound()
 
+// Structure
 struct Reptile {
     var name: String
     var sound: String
@@ -70,3 +72,22 @@ var d = c
 c.sampleProperty = 20
 print(c.sampleProperty)
 print(d.sampleProperty)
+
+//Enumerations
+enum TrafficLightColor {
+    case red
+    case yellow
+    case green
+    func description() -> String {
+        switch self {
+        case .red:
+            "red"
+        case .yellow:
+            "yellow"
+        case .green:
+            "green"
+        }
+    }
+}
+var trafficLightColor = TrafficLightColor.yellow
+print(trafficLightColor.description())

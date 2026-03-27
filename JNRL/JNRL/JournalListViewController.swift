@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class JournalListViewController: UIViewController {
 
+    @IBOutlet var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
